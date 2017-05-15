@@ -13,8 +13,10 @@
 
 -(UIViewController *)action_GetModuleController:(NSDictionary *)param{
     ModuleAController *vc=[[ModuleAController alloc]initWithNibName:@"BusinessModuleA.ModuleAController" bundle:nil];
+    if ([param.allKeys containsObject:@"callBack"]) {
+        vc.callBack=[param objectForKey:@"callBack"];
+    }
     
-    vc.callBack=param[@"callBack"];
     
     return vc;
 }
