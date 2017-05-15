@@ -12,7 +12,7 @@
 
 
 -(UIViewController *)action_GetModuleController:(NSDictionary *)param{
-    ModuleAController *vc=[[ModuleAController alloc]initWithNibName:@"BusinessModuleA.ModuleAController" bundle:nil];
+    ModuleAController *vc=[[ModuleAController alloc]initWithNibName:@"ModuleAController" bundle:nil];
     if ([param.allKeys containsObject:@"callBack"]) {
         vc.callBack=[param objectForKey:@"callBack"];
     }

@@ -33,12 +33,11 @@
         }
         
     }
-    if ([self parentViewController]) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }else if([self navigationController]){
+    if (self.navigationController != nil){
         [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }
-    
 }
 
 /*
